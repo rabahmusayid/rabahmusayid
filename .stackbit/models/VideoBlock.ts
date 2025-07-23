@@ -23,7 +23,7 @@ export const VideoBlockModel: Model = {
             type: 'string',
             name: 'url',
             label: 'Video URL (YouTube, Vimeo, .mp4)',
-            default: 'https://youtu.be/BD-YliszGkA'
+            default: 'https://www.youtube.com/@marketlightning'
         },
         {
             type: 'string',
