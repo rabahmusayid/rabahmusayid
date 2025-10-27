@@ -71,7 +71,8 @@ export default function PrivacyPolicy() {
             <h2>10. Contact</h2>
             <p>
                 For questions or privacy-related concerns, contact us at:<br />
-                <strong>Email:</strong> rabah734116@gmail.com
+                <strong>Email:</strong> oscarkwt1@gmail.com
+
 
 
             </p>
