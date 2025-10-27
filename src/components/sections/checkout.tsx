@@ -9,10 +9,18 @@ declare global {
 export default function CheckoutSection() {
     useEffect(() => {
         const script = document.createElement('script');
+ МОНАМMED
         script.src = 'https://cdn.paddle.com/paddle/paddle.js';
         script.onload = () => {
             window.Paddle.Setup({
                 vendor: 236739, // ✅ Vendor ID
+
+        script.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
+        script.onload = () => {
+            window.Paddle.Setup({
+                token: 'live_ebb713e9b483c666ec833d9e544', // ✅ Client-side token
+                environment: 'production',
+ main
             });
         };
         document.body.appendChild(script);
@@ -22,7 +30,11 @@ export default function CheckoutSection() {
         window.Paddle.Checkout.open({
             items: [
                 {
+МОНАМMED
                     priceId: 'pro_01k0ferfj24g7dzv7t5f1rp8h4', // ✅ Product ID
+
+                    priceId: 'pri_01k0ff21mn9p4nmsx16sw5afze', // ✅ Use actual Price ID
+ main
                 },
             ],
         });

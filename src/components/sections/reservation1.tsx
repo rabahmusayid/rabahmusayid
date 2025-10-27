@@ -1,0 +1,180 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+
+export default function Reservation1() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        country: "",
+        date: "",
+        time: "",
+    });
+
+    const [showPayment, setShowPayment] = useState(false);
+    const [agreed, setAgreed] = useState(false);
+
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log("Form submitted:", formData);
+        setShowPayment(true);
+    };
+
+    const handleRedirectToPayment = () => {
+        if (!agreed) return;
+        window.open(
+            "https://pay.paddle.io/hsc_01k1nntpp800578w17ya6j0q4k_g441ffdy32w9czremw6ge21v9vpxn6j5",
+            "_blank"
+        );
+    };
+
+    return (
+        <div className="bg-white text-black p-6 rounded-xl shadow-lg max-w-lg mx-auto mt-12 border border-gray-200">
+            <p className="mb-4 text-center text-sm text-gray-600">
+                Please fill in your details carefully. We will contact you after you complete the payment to start preparing your project.
+                Providing accurate information helps avoid payment issues or delays.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-6 text-center">Book an Appointment</h2>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="example@email.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+1 555 123 4567"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label htmlFor="country">Country</Label>
+                    <select
+                        id="country"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full border border-gray-300 rounded px-3 py-2"
+                    >
+                        <option value="" disabled>
+                            Select your country
+                        </option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <Label htmlFor="date">Select Date</Label>
+                    <Input
+                        id="date"
+                        name="date"
+                        type="date"
+                        value={formData.date}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <Label htmlFor="time">Select Time</Label>
+                    <Input
+                        id="time"
+                        name="time"
+                        type="time"
+                        value={formData.time}
+                        onChange={handleInputChange}
+                        required
+                    />
+                </div>
+
+                <Button type="submit" className="w-full">
+                    Confirm Booking
+                </Button>
+            </form>
+
+            {showPayment && (
+                <div className="mt-8 text-center space-y-4">
+                    <p className="text-gray-700">
+                        You can now complete the payment.
+                        <br />
+                        We will contact you at the scheduled time. By completing the payment, you agree to receive our call and accept our{" "}
+                        <a
+                            href="/privacy"
+                            className="underline text-blue-600"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Privacy Policy
+                        </a>
+                        .
+                    </p>
+
+                    <div className="flex items-center justify-center space-x-2 rtl:space-x-reverse text-sm">
+                        <input
+                            type="checkbox"
+                            id="agree"
+                            checked={agreed}
+                            onChange={() => setAgreed(!agreed)}
+                            className="w-4 h-4"
+                        />
+                        <label htmlFor="agree">I agree to the privacy policy and to receive a call</label>
+                    </div>
+
+                    <Button
+                        onClick={handleRedirectToPayment}
+                        className="bg-black hover:bg-gray-800 w-full"
+                        disabled={!agreed}
+                    >
+                        Go to Payment
+                    </Button>
+                </div>
+            )}
+        </div>
+    );
+}

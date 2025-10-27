@@ -8,7 +8,11 @@ import {
 const icons = [
     {
         icon: <FaWhatsapp />,
+ МОНАМMED
         href: 'https://wa.me/967774739149',
+=======
+        href: 'https://wa.me/905525909960',
+ main
         bg: 'bg-green-500'
     },
     {
