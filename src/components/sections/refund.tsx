@@ -29,7 +29,8 @@ export default function RefundPolicy() {
             <h2>5. Contact Us</h2>
             <p>
                 If you have questions about our Refund Policy, please reach out to:<br />
-                <strong>Email:</strong> rabah734116@gmail.com
+                <strong>Email:</strong> oscarkwt1@gmail.com
+
 
             </p>
         </main>
