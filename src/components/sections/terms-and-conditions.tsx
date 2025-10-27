@@ -6,7 +6,11 @@ export default function TermsOfService() {
             <h2>1. Introduction</h2>
             <p>
                 These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website and the digital products offered through it.
+ МОНАМMED
+                This website is operated by <strong>ST ELITE LLC</strong>, a legally registered business entity.
+=======
                 This website is operated by <strong>Rabah Musayid LLC</strong>, a legally registered business entity.
+ main
                 By accessing or using our services, you agree to be bound by these Terms.
             </p>
 
@@ -28,7 +32,11 @@ export default function TermsOfService() {
 
             <h2>5. Product Updates & Support</h2>
             <p>
+ МОНАМMED
+                Your purchase includes lifetime access to the current version of the product. Future updates may be provided at no additional cost. Technical support is available via email at <strong>rabah734116@gmail.com</strong>.
+=======
                 Your purchase includes lifetime access to the current version of the product. Future updates may be provided at no additional cost. Technical support is available via email at <strong>rabahmusayid@gmail.com</strong>.
+ main
             </p>
 
             <h2>6. Intellectual Property</h2>
@@ -49,7 +57,11 @@ export default function TermsOfService() {
             <h2>9. Contact</h2>
             <p>
                 For any inquiries, support requests, or legal questions, please contact us at:<br />
+ МОНАМMED
+                <strong>Email:</strong> oscarkwt1@gmail.com
+
                 <strong>Email:</strong> rabahmusayid@gmail.com
+main
             </p>
         </main>
     );
