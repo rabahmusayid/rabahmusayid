@@ -51,7 +51,7 @@ export default function TermsOfService() {
             <h2>9. Contact</h2>
             <p>
                 For any inquiries, support requests, or legal questions, please contact us at:<br />
-                <strong>Email:</strong> rabah734116@gmail.com
+                <strong>Email:</strong> oscarkwt1@gmail.com
 
             </p>
         </main>
