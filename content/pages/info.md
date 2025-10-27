@@ -11,7 +11,7 @@ backgroundImage:
   opacity: 75
 sections:
   - type: ImageTextSection
-    name: МОНАМMED MANSOOR-
+    name: sami MOHAMED MONGI turk
     headline: 10 Years of Experience in Designing Shopify Stores That Drive Real Results
     text: >
       I’m МОНАМMED MANSOOR , founder of Market lightning Ilc, a specialist in designing and developing high-performance Shopify stores for over 10 years.  
